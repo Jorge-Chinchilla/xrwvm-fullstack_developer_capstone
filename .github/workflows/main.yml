@@ -50,10 +50,11 @@ jobs:
           node-version: 14
 
       - name: Install JSHint
-        run: npm install jshint --global
+        run: |
+          npm install jshint --global
+          jshint --version
 
       - name: Run Linter
         run: |
-          # This command finds all JavaScript files recursively and runs JSHint on them
-          find ./server/database -name "*.js" -exec jshint --esversion=6 {} +
+          find ./server/database -name "*.js" -exec jshint {} +
           echo "Linted all the js files successfully"
