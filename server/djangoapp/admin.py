@@ -12,6 +12,4 @@ admin.site.register(CarMake)
 # CarMakeAdmin class with CarModelInline
 admin.site.register(CarModel)
 
-
-
 # Register models here
